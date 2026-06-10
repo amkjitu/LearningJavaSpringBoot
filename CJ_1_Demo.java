@@ -1,6 +1,6 @@
 /*
     * This file demonstrates the JVM memory model with a simple Calculator class and a main method that uses it.
-    * It illustrates how classes, objects, and method calls are represented in Metaspace, Heap, and Thread Stack.
+    * It illustrates how classes, objects, and method calls(method overloading) are represented in Metaspace, Heap, and Thread Stack.
 */
 class Calculator {
 
