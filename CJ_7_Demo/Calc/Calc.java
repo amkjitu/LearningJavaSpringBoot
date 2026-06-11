@@ -1,4 +1,4 @@
-package CJ_7_Demo;
+package CJ_7_Demo.Calc;
 
 public class Calc {
     int add(int a, int b) {

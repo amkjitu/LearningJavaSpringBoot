@@ -1,5 +1,17 @@
 package CJ_7_Demo;
 
+// import CJ_7_Demo.Phone.Smartphone;
+// import CJ_7_Demo.Phone.Camera;
+// import CJ_7_Demo.Phone.Phone;
+// import CJ_7_Demo.Calc.Calc;
+// import CJ_7_Demo.Calc.AdvCalc;
+// import CJ_7_Demo.Calc.SciCalc;
+// import CJ_7_Demo.Calc.GraphingCalc;
+
+// or we can import all classes from the Calc and Phone packages using wildcard imports
+import CJ_7_Demo.Calc.*; // this means all the files inside the Calc Folder
+import CJ_7_Demo.Phone.*;
+
 /*
  * Inheritance: In OOP, inheritance is a fundamental concept that allows a new class (called a subclass or child class) to inherit properties and behaviors (fields and methods) from an existing class (called a superclass or parent class). This promotes code reusability and establishes a natural hierarchical relationship between classes.
  * Inheritance allows the subclass to:
@@ -41,7 +53,28 @@ package CJ_7_Demo;
  * - Hierarchical Inheritance: A class "Shape" is a superclass, and classes "Circle", "Square", and "Triangle" inherit from it.
  * - Multiple Inheritance (using interfaces): A class "Smartphone" implements interfaces "Camera" and "Phone".
  * 
-*/
+ * Package: A package in Java is a namespace that organizes a set of related classes and interfaces. It helps to avoid name conflicts and to control access to classes. In the provided code snippet, we have two packages: "Calc" and "Phone". The "Calc" package contains classes related to different types of calculators (Calc, AdvCalc, SciCalc, GraphingCalc), while the "Phone" package contains interfaces and classes related to phone functionalities (Phone, Camera, Smartphone). By organizing our classes into packages, we can maintain a cleaner and more modular codebase, making it easier to manage and understand the relationships between different components of our application.
+ * 
+ * Package Structure:
+ * - CJ_7_Demo
+ *  - Calc
+ *    - Calc.java
+ *    - AdvCalc.java
+ *    - SciCalc.java
+ *    - GraphingCalc.java
+ * - Phone
+ *   - Phone.java
+ *   - Camera.java
+ *   - Smartphone.java
+ * If i want to use for example, the AdvCalc class in the CJ_7_Demo class, I need to import it using `import CJ_7_Demo.Calc.AdvCalc;` and then I can create an instance of AdvCalc and call its methods. this is actually the folder by dot notation in Java, where the folder structure corresponds to the package structure. So, the AdvCalc class is located in the "Calc" package, which is a subpackage of "CJ_7_Demo". By importing it, we can use its functionalities in our main class.
+ * 
+ * Access Modifiers: In Java, access modifiers are keywords that set the accessibility of classes, methods, and other members. The main access modifiers are:
+ * 1. public: The member is accessible from any other class.
+ * 2. protected: The member is accessible within the same package and subclasses in other packages.
+ * 3. default (package-private): The member is accessible only within the same package.
+ * 4. private: The member is accessible only within the same class.
+ * 
+ */
 
 public class CJ_7_Demo {
     public static void main(String[] args) {

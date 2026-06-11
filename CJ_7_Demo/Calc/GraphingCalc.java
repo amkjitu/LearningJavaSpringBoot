@@ -1,4 +1,4 @@
-package CJ_7_Demo;
+package CJ_7_Demo.Calc;
 
 public class GraphingCalc extends AdvCalc {
     public String graphFunction(String function) {

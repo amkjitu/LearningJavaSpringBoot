@@ -6,6 +6,10 @@ Method Overriding: Method overriding occurs when a subclass provides a specific 
 
 * Polymorphism: Polymorphism is the ability of an object to take on many forms. In Java, polymorphism is achieved through method overriding, where a subclass can provide a specific implementation of a method that is defined in its superclass.
 
+Overriding: When a subclass provides a specific implementation for a method that is already defined in its superclass, it is called method overriding. The method in the subclass must have the same name, return type, and parameters as the method in the superclass. This allows the subclass to provide its own behavior while still maintaining the same method signature. For example, if the Egg class has a method called show(), and the Caterpillar class extends Egg and provides its own implementation of the show() method, then we say that the Caterpillar class is overriding the show() method of the Egg class.
+
+*Overriding and polymorphism allow for dynamic method dispatch, which means that the method that gets executed is determined at runtime based on the actual type of the object rather than the type of the reference variable. This allows for more flexible and extensible code, as you can write code that works with objects of different classes through a common interface or superclass, while still allowing for specific behaviors to be defined in each subclass.
+
 * When a method is called on an object, the JVM determines which version of the method to execute based on the actual type of the object at runtime. This is known as dynamic method dispatch. Polymorphism allows for flexibility and extensibility in code, as it enables objects of different classes to be treated as objects of a common superclass, while still allowing for specific behaviors to be defined in each subclass.
 Note: Method Overloading is a compile-time polymorphism, while Method Overriding is a runtime polymorphism.
 
@@ -40,8 +44,12 @@ class Caterpillar extends Egg {
     public void config() {
         System.out.println("Configuring Caterpillar...");
     }
+
     public void show() {
         System.out.println("Hello from Caterpillar!");
+    }
+    public void show1() {
+        System.out.println("show1: Hello from Caterpillar!");
     }
 }
 
@@ -82,7 +90,13 @@ public class CJ_9_Demo {
         Caterpillar catter = (Caterpillar) egg; // downcasting
         catter.show();
         catter.config();
+                
         // In this example, we first create an instance of the Caterpillar class and assign it to a reference variable of type Egg (upcasting). Then, we explicitly cast the Egg reference back to a Caterpillar reference (downcasting) and call the show() and config() methods. Since the actual object is still a Caterpillar, the overridden methods in the Caterpillar class will be executed successfully without any exceptions.
+
+        // egg.show1(); // This will cause a compile-time error because the reference variable egg is of type Egg, and the show1() method is not defined in the Egg class. Even though the actual object is of type Caterpillar, the reference variable can only access methods that are defined in its own class (Egg) or its superclasses. Since show1() is not defined in Egg, it cannot be called on the egg reference variable, resulting in a compile-time error.
+        
+        // catter.show1(); // This will work by downcasting because the reference variable catter is of type Caterpillar, and the show1() method is defined in the Caterpillar class. Since catter is a reference to an actual Caterpillar object, it can access all methods defined in the Caterpillar class, including show1(), without any issues.
+
 
         ///6. For more better understanding, please refer to the detailed explanation as following;
         /*

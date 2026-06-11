@@ -1,4 +1,4 @@
-package CJ_7_Demo;
+package CJ_7_Demo.Calc;
 
 public class SciCalc extends AdvCalc {
     public double squareRoot(double n) {

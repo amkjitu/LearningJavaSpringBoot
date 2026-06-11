@@ -1,4 +1,4 @@
-package CJ_7_Demo;
+package CJ_7_Demo.Phone;
 
 public class Smartphone implements Phone, Camera {
     @Override
