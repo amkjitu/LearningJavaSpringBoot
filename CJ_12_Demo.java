@@ -26,6 +26,7 @@ Enums: An enum in Java is a special data type that represents a fixed set of con
 /// 1. Interface
 
 /// Real world example 1 of interface
+// Vehicle is a type of normal interface, it contains multiple abstract methods (start() and stop()) and constant variables (VEHICLE_TYPE and MAX_SPEED). Any class that implements the Vehicle interface must provide implementations for both start() and stop() methods, and it can access the constant variables defined in the interface.
 interface Vehicle {
 
     // int MAX_SPEED = 120; // only static final variables are allowed in interfaces, so this variable is implicitly public, static and final. It cannot be changed.
@@ -49,6 +50,8 @@ class Bus implements Vehicle {
     }
 }
 
+//Boat is a type of single abstract method (SAM) interface, it has only one abstract method sail(), so it can be used as a functional interface for lambda expressions and method references.
+@FunctionalInterface // This annotation is optional but it is good practice to use it to indicate that this interface is intended to be a functional interface
 interface Boat {
 
     void sail(); // Abstract method, must be implemented by classes that implement this interface
@@ -180,7 +183,20 @@ public class CJ_12_Demo {
         // user2.useComputer(new Laptop());
         // user2.useComputer(new Desktop());
 
-        // 5. Example Enums
+        // 5. Single Abstract Method (SAM) interface example, since Boat is a functional interface (it has only one abstract method sail()), we can use a lambda expression to provide an implementation for the sail() method without needing to create a separate class that implements the Boat interface.
+        //5.1 Using an anonymous class to implement the sail method of the Boat interface
+        Boat myBoat = new Boat() { 
+            public void sail() {
+                System.out.println("My boat is sailing.");
+            }
+        };
+        myBoat.sail(); // Calling the sail method, which will execute the lambda expression
+
+        // 5.2 Using a lambda expression to implement the sail method of the Boat interface
+        Boat myBoat1 = () -> System.out.println("My boat is sailing."); // Using a lambda expression to implement the sail method of the Boat interface
+        myBoat1.sail(); // Calling the sail method, which will execute the lambda expression
+
+        // %%. Example Enums
         // STATUS status = STATUS.PENDING;
         // System.out.println("Current status: " + status); // This will print "Current status: PENDING"
         // STATUS [] allStatuses = STATUS.values(); // This will return an array of all enum constants defined in the STATUS enum
@@ -188,8 +204,8 @@ public class CJ_12_Demo {
         // for (STATUS s : allStatuses) {
         //     System.out.println(s.ordinal() + " - " + s);
         // }
-        for (RAM ram : RAM.values()) {
-            System.out.println(ram.name() + " has capacity: " + ram.getCapacity() + " GB");
-        }
+        // for (RAM ram : RAM.values()) {
+        //     System.out.println(ram.name() + " has capacity: " + ram.getCapacity() + " GB");
+        // }
     }
 }
