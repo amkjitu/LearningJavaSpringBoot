@@ -1,6 +1,6 @@
 
 /*
- Collection: In Java, Collection is a framework that provides an architecture to store and manipulate a group of objects. It includes various classes and interfaces that allow developers to work with data structures such as lists, sets, queues, and maps. The Collection framework provides methods for adding, removing, and accessing elements in these data structures, making it easier to manage and manipulate collections of objects in Java.
+ Collection: In Java, Collection is a framework/API that provides an architecture to store and manipulate a group of objects. It includes various classes and interfaces that allow developers to work with data structures such as lists, sets, queues, and maps. The Collection framework/API provides methods for adding, removing, and accessing elements in these data structures, making it easier to manage and manipulate collections of objects in Java.
  
  Collections: The Collections class is a utility class in the java.util package that provides static methods for working with collections, such as sorting and searching. It includes methods for performing various operations on collections, such as sorting, shuffling, reversing, and finding the maximum or minimum element in a collection. The Collections class also provides methods for creating synchronized (thread-safe) collections and unmodifiable collections.
 
