@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=q6z_UCBM5Ek
 
+### I. CJ (Core Java)
+
 1: Basic, Method Overloading
 
 2-6: Object, Encapsulation, Static
@@ -11,3 +13,7 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 16: Collection(List,ArrayList,LinkedList,Vector,Stack,Set,HashSet,HashSet,LinkedHashSet,TreeSet,Queue,Deque,PriorityQueue), Map(HashMap,HashTable,TreeMap), Comparator, Comparable
 
 17-20: Stream API(Stream, Parallel Stream), Optional Class, Method Reference, Constructor Reference, Sealed Classes, record classes
+
+### II. JDBC (Java Database Connectivity)
+
+1: Basic, Method Overloading
