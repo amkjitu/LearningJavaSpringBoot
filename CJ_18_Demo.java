@@ -9,15 +9,18 @@ import java.util.Optional;
 public class CJ_18_Demo {
     public static void main(String[] args) {
         List<String> namesString = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve");
-        // 1. Create an Optional from the first name that starts with "A"
-        Optional<String> names = namesString.stream()
-                .filter(name -> name.startsWith("Z"))
-                .findFirst();
+        // // 1. Create an Optional from the first name that starts with "A"
+        // Optional<String> names = namesString.stream()
+        //         .filter(name -> name.startsWith("Z"))
+        //         .findFirst();
 
-        // 2. Check if the Optional contains a value and print it
-        System.out.println("Optional contains value: " + names.get());
-        // this will throw NoSuchElementException because there is no name that starts with "Z" in the list, so the Optional is empty and does not contain a value.
-        
+        // // 2. Check if the Optional contains a value and print it
+        // System.out.println("Optional contains value: " + names.get());
+        // // this will throw NoSuchElementException because there is no name that starts with "Z" in the list, so the Optional is empty and does not contain a value.
+
+        //3. How to use in string type
+        String name = namesString.stream().filter(n -> n.startsWith("Z")).findFirst().orElse("No name found");
+        System.out.println("Name: " + name);// this will print "No name found" because there is no name that starts with "Z" in the list, so the Optional is empty and the default value "No name found" is returned.
 
     }
 }

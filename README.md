@@ -10,4 +10,4 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 
 16: Collection(List,ArrayList,LinkedList,Vector,Stack,Set,HashSet,HashSet,LinkedHashSet,TreeSet,Queue,Deque,PriorityQueue), Map(HashMap,HashTable,TreeMap), Comparator, Comparable
 
-17-: Stream API(Stream, Parallel Stream)
+17-20: Stream API(Stream, Parallel Stream), Optional Class, Method Reference, Constructor Reference, Sealed Classes, record classes
