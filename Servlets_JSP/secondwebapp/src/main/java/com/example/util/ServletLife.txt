@@ -1,0 +1,41 @@
+// /*
+// 2. Servlet Life Cycle: The servlet life cycle is the process by which a servlet is loaded, initialized, and destroyed by the servlet container. The life cycle consists of three main phases: loading and instantiation, initialization, and service. The servlet container manages the life cycle of servlets, ensuring that they are properly loaded, initialized, and destroyed as needed.
+//     i. Loading and Instantiation: The servlet container loads the servlet class into memory and creates an instance of the servlet. This is done when the servlet is first requested or when the server starts up, depending on the configuration.
+//     ii. Initialization: After the servlet instance is created, the container calls the init() method to initialize the servlet. This method is called only once during the life cycle of the servlet and is used to perform any necessary setup or configuration.
+//     iii. Service: Once the servlet is initialized, the container calls the service() method to handle incoming requests. The service() method is called for each request and is responsible for processing the request and generating a response. The service() method can be overridden to handle different types of requests, such as GET or POST.
+//     iv. Destruction: When the servlet is no longer needed, the container calls the destroy() method to clean up any resources used by the servlet. This method is called only once during the life cycle of the servlet and is used to perform any necessary cleanup or resource release.
+
+// Note: Loading, initialization and destruction are done only once in the life cycle of a servlet, while the service method is called multiple times for each request.
+// */
+// package com.example.util;
+
+// @WebServlet("/ServletLife")
+// public class ServletLife extends HttpServlet {
+
+//     static{
+//         System.out.println("ServletLife class is loaded to the memory by the container");
+//     }
+
+//     public ServletLife() {
+//         // Default constructor
+//         System.out.println("Servlet object is created internally by the container");
+//     }
+
+//     @Override
+//     public void init() {
+//         // Initialization code for the servlet
+//         System.out.println("Servlet is initialized");
+//     }
+
+//     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//         // Handle requests here
+//         System.out.println("Servlet is servicing a request");
+//     }
+
+//     @Override
+//     public void destroy() {
+//         // Cleanup code for the servlet
+//         System.out.println("Servlet is destroyed");
+//     }
+
+// }

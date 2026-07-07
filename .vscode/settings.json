@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\ROXNOR_Projects\\YosuiteProject\\Others\\mysql-connector-j-9.7.0.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
