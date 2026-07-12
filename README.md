@@ -1,4 +1,5 @@
 https://www.youtube.com/watch?v=q6z_UCBM5Ek
+## Complete Java Development: Spring Boot, Microservices, Spring AI
 
 ### I. CJ (Core Java)
 
@@ -16,4 +17,14 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 
 ### II. JDBC (Java Database Connectivity)
 
-1: Basic, Method Overloading
+1: JDBC Introduction, JDBC Architecture, JDBC Drivers, JDBC Connection, Statement, PreparedStatement, ResultSet, Statement, PreparedStatement, ResultSet, JDBC Batch Processing, JDBC CRUD Operations.
+
+
+### III. Servlet & JSP (JavaServer Pages)
+
+1-4: Servlet,  Basic JSP, Introduction to Separation of Concerns, MVC Architecture.
+
+### IV. REST API (Representational State Transfer)
+1: REST API Introduction, REST API Architecture, Jersey API, REST API CRUD Operations
+
+### V. Web Services
