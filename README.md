@@ -24,7 +24,11 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 
 1-4: Servlet,  Basic JSP, Introduction to Separation of Concerns, MVC Architecture.
 
-### IV. REST API (Representational State Transfer)
-1: REST API Introduction, REST API Architecture, Jersey API, REST API CRUD Operations
+### IV. REST API (Representational State Transfer) and Web Services
+1-2: REST API Introduction, REST API Architecture, Jersey Framework, REST API CRUD Operations, Spring Framework, Spring JPA REST.
 
-### V. Web Services
+### V. ORM(Object Relational Mapping) Tool & Hibernate
+1-2: ORM Tool Introduction, Hibernate Framework, Hibernate CRUD Operations, Hibernate Query Language (HQL), Hibernate Relationships (One-to-One, One-to-Many, Many-to-One, Many-to-Many), Hibernate Caching, Hibernate Transactions, Hibernate Annotations, Hibernate Configuration.
+
+### VI. Spring Framework
+1-2: Spring Framework Introduction, Spring Framework Architecture, Spring Boot, Dependency Injection, CRUD Operations

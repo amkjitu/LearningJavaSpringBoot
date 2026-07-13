@@ -11,7 +11,7 @@ Create a Java Project by archetype jersey-quickstart-webapp with Command Line:
 ```
 mvn archetype:generate -DgroupId="com.mycompany.app" -DartifactId="my-jerseyapp" -DarchetypeGroupId="org.glassfish.jersey.archetypes" -DarchetypeArtifactId="jersey-quickstart-webapp" -DarchetypeVersion="2.41" -DinteractiveMode=false
 ```
-Here in this project we have created two resources, one is MyResource.java and RobotResource.java. MyResource.java is a simple resource that returns a "Hello, World!" message when accessed via a GET request. RobotResource.java is a bit more complex and demonstrates how to handle different HTTP methods (GET, POST, PUT, DELETE) for a resource representing a robot:
+Here in this "my-app-id" project we have created two resources, one is MyResource.java and RobotResource.java. MyResource.java is a simple resource that returns a "Hello, World!" message when accessed via a GET request. RobotResource.java is a bit more complex and demonstrates how to handle different HTTP methods (GET, POST, PUT, DELETE) for a resource representing a robot:
 
 Phase 1: We use memory storage to store robot data. In a real-world application, you would typically use a database for persistent storage.
 
@@ -19,3 +19,9 @@ Phase 2: We will use database storage to store robot data. In a real-world appli
 
 
 2. Spring is a powerful framework that allows developers to build robust and scalable RESTful APIs. It provides features like dependency injection, request mapping, and exception handling, making it easier to create RESTful services.
+
+First create spring boot project "spring-boot-rest-api". 
+
+Spring JPA REST API with database MySQL for persistent storage. For more information see the springbootrestapi projects README.md file.
+
+JPA (Java Persistence API): JPA is a specification for managing relational data in Java applications. It provides a standard way to map Java objects to database tables and perform CRUD operations. Spring Data JPA is a part of the Spring Framework that simplifies the implementation of JPA-based repositories.
