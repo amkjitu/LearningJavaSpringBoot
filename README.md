@@ -28,7 +28,10 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 1-2: REST API Introduction, REST API Architecture, Jersey Framework, REST API CRUD Operations, Spring Framework, Spring JPA REST.
 
 ### V. ORM(Object Relational Mapping) Tool & Hibernate
-1-2: ORM Tool Introduction, Hibernate Framework, Hibernate CRUD Operations, Hibernate Query Language (HQL), Hibernate Relationships (One-to-One, One-to-Many, Many-to-One, Many-to-Many), Hibernate Caching, Hibernate Transactions, Hibernate Annotations, Hibernate Configuration.
+1: ORM Tool Introduction, Hibernate Framework, Hibernate CRUD Operations, Hibernate Query Language (HQL), Hibernate Relationships (One-to-One, One-to-Many, Many-to-One, Many-to-Many), Hibernate Caching, Hibernate Transactions, Hibernate Annotations, Hibernate Configuration.
 
-### VI. Spring Framework
-1-2: Spring Framework Introduction, Spring Framework Architecture, Spring Boot, Dependency Injection, CRUD Operations
+### VI. Spring Framework and Spring Boot
+2-3: Spring Framework Introduction, Spring Framework Architecture, Spring Boot, Dependency Injection, Spring,  Spring VS Spring Boot.
+
+### VII. Spring REST API Using Spring Boot
+1: Spring MVC Architecture, Controller, Service, Repository, Spring REST API CRUD Operations

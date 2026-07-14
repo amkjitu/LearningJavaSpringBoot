@@ -1,0 +1,32 @@
+ <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--1. No wiring-->
+<!--    <bean id="dev" class="org.example.Dev">-->
+<!--        <property name="name" value="John Doe"/>-->
+<!--        <property name="role" value="Developer"/>-->
+<!--&lt;!&ndash;        <property name="computer" ref="laptop"/>&ndash;&gt;-->
+<!--        <constructor-arg name="computer" ref="desktop"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="laptop" class="org.example.Laptop">-->
+<!--    </bean>-->
+
+<!--    <bean id="desktop" class="org.example.Desktop">-->
+<!--    </bean>-->
+
+<!--     2. Auto-wiring by name-->
+    <bean id="dev2" class="org.example.Dev" autowire="byType">
+        <property name="name" value="Jane Smith"/>
+        <property name="role" value="Senior Developer"/>
+<!--        <property name="computer" ref="computer"/>-->
+    </bean>
+
+    <bean id="laptop" class="org.example.Laptop" primary="true">
+    </bean>
+
+    <bean id="desktop" class="org.example.Desktop">
+    </bean>
+
+</beans>
