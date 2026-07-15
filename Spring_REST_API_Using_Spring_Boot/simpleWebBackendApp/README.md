@@ -11,5 +11,6 @@ When a request is received, the DispatcherServlet consults the HandlerMapping to
 
 ### How this 'simplewebbackend' application works:
 - It uses lombok.Data for automatic generation of getters, setters, and other utility methods
-- It provides a simple REST API with endpoints for managing products
+- It provides a simple REST API with endpoints for managing products(CRUD operations)
     
+#### Later we will add database to this project when learning Spring Data JPA(See Spring_Data_JPA Folder)

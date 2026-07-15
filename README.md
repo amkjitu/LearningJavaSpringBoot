@@ -35,3 +35,11 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 
 ### VII. Spring REST API Using Spring Boot
 1: Spring MVC Architecture, Controller, Service, Repository, Spring REST API CRUD Operations
+
+### VIII. Spring JDBC
+1: Spring JDBC Introduction, JDBC Template, Spring JDBC CRUD Operations.
+
+### IX. Spring Data JPA
+1: Spring Data JPA Introduction, Spring Data JPA CRUD Operations, Spring Data JPA Query Methods
+
+### X. Spring Boot MVC Project
