@@ -1,10 +1,7 @@
 package org.example.backendecomproj.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +16,7 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private String description;
     private String brand;
@@ -29,7 +26,16 @@ public class Product {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date releaseDate;
     private boolean available;
-    private int quantity;
+    private Integer quantity;
+
+    @Column
+    private String imageName;
+    @Column
+    private String imageType;
+
+    @Lob
+    @Column
+    private byte[] imageData;
 
     /*
     insert into product (name, description, brand, price, category, release_date, available, quantity)

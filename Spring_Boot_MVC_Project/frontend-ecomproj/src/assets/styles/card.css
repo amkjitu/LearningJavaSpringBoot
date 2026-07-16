@@ -1,0 +1,282 @@
+/* =========================
+   Product Grid
+========================= */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fill, minmax(250px, 280px));
+
+    gap: 28px;
+
+    padding: 30px 0;
+
+}
+
+
+
+/* =========================
+   Product Card
+========================= */
+
+.product-card {
+
+    width: 280px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+            0 4px 12px rgba(0,0,0,0.06);
+
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+            0 12px 30px rgba(0,0,0,0.12);
+
+}
+
+
+
+/* =========================
+   Product Image
+========================= */
+
+.image-container {
+
+    height: 180px;
+
+    width:100%;
+
+    background:#f8f9fa;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+
+.image-container img {
+
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+}
+
+
+
+/* =========================
+   Card Content
+========================= */
+
+.card-body {
+
+    padding:18px;
+
+}
+
+
+
+/* Stock Badge */
+
+.badge-success,
+.badge-danger {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:5px 12px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.badge-success {
+
+    background:#e8f7ee;
+
+    color:#16a34a;
+
+}
+
+
+
+.badge-danger {
+
+    background:#fdecec;
+
+    color:#dc2626;
+
+}
+
+
+
+/* Product Name */
+
+.card-body h3 {
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#222;
+
+    margin:8px 0;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+
+/* Product Details */
+
+.card-body p {
+
+    margin:6px 0;
+
+    font-size:14px;
+
+    color:#666;
+
+}
+
+
+
+.card-body p b {
+
+    color:#333;
+
+}
+
+
+
+/* Price */
+
+.card-body h2 {
+
+    margin:16px 0;
+
+    color:#5148ea;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+
+/* Add Cart Button */
+
+.card-body button {
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#5148ea;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.card-body button:hover {
+
+    background:#4038c9;
+
+    transform:scale(1.02);
+
+}
+
+
+
+.card-body button:disabled {
+
+    background:#bdbdbd;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+
+/* =========================
+   Responsive
+========================= */
+
+
+@media(max-width:768px){
+
+
+    .product-grid {
+
+        grid-template-columns:
+        repeat(auto-fill,minmax(220px,1fr));
+
+    }
+
+
+    .product-card {
+
+        width:100%;
+
+    }
+
+}
