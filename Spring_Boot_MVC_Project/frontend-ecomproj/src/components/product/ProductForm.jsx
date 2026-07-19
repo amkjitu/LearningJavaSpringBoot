@@ -218,15 +218,26 @@ const ProductForm = ({productId}) => {
                         />
                     </div>
                     <div className="form-group">
-                        <label>
+                        <label htmlFor="category">
                             Category
                         </label>
-                        <input
+
+                        <select
+                            id="category"
                             name="category"
-                            placeholder="Category"
                             value={product.category}
                             onChange={handleChange}
-                        />
+                        >
+                            <option value="">-- Select Category --</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Home & Kitchen">Home & Kitchen</option>
+                            <option value="Books">Books</option>
+                            <option value="Sports & Outdoors">Sports & Outdoors</option>
+                            <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                            <option value="Toys & Games">Toys & Games</option>
+                        </select>
                     </div>
                 </div>
 
@@ -274,7 +285,7 @@ const ProductForm = ({productId}) => {
                         ref={fileInputRef}
                         type="file"
                         accept="image/*"
-                        required
+                        // required
                         onChange={(e)=>{
                             const file = e.target.files[0];
                             setImage(file);

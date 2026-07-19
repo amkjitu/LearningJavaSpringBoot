@@ -43,3 +43,9 @@ https://www.youtube.com/watch?v=q6z_UCBM5Ek
 1: Spring Data JPA Introduction, Spring Data JPA CRUD Operations, Spring Data JPA Query Methods
 
 ### X. Spring Boot MVC Project
+1: Backend: Spring Boot MVC Project CRUD Operations.
+
+2: Frontend: Spring Boot MVC Project CRUD Operations.
+
+### XI. Spring Security
+1: Spring Security Introduction, Authentication, Authorization, Spring Security Configuration.

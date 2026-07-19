@@ -44,3 +44,7 @@ export const deleteProduct = (id) => {
         `${API_BASE_URL}/product/${id}`
     );
 };
+
+export const searchProducts = (keyword) => {
+    return axios.get(`${API_BASE_URL}/products/search?keyword=${keyword}`);
+};

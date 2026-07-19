@@ -3,28 +3,24 @@ import { useNavigate } from "react-router-dom";
 import "../../assets/styles/card.css";
 import noProductImage from "../../assets/images/no-product.png";
 import { useCart } from "../../context/CartContext";
+import { getProductImage } from "../../services/productService";
 
 const ProductCard = ({ product }) => {
 
     const { addToCart } = useCart();
     const navigate = useNavigate();
 
-
-    const imageUrl = `http://localhost:82/api/product/${product.id}/image`;
-
     const productImage =
         product.imageData
             ?
-            imageUrl
+            getProductImage(product.id)
             :
             noProductImage;
 
     const handleCart = (e)=>{
 
         e.stopPropagation();
-
         addToCart(product);
-
         navigate("/cart");
     };
 
@@ -35,10 +31,7 @@ const ProductCard = ({ product }) => {
             className="product-card"
             onClick={()=>navigate(`/product/${product.id}`)}
         >
-
-
             <div className="image-container">
-
                 <img
                     src={productImage}
                     alt={product.name}
@@ -47,16 +40,10 @@ const ProductCard = ({ product }) => {
                         e.target.onerror=null;
                         e.target.src=noProductImage;
                     }}
-
                 />
-
             </div>
 
-
-
             <div className="card-body">
-
-
                 <span
                     className={
                         product.available
@@ -66,7 +53,6 @@ const ProductCard = ({ product }) => {
                             "badge-danger"
                     }
                 >
-
                     {
                         product.available
                             ?
@@ -77,13 +63,9 @@ const ProductCard = ({ product }) => {
 
                 </span>
 
-
-
                 <h3>
                     {product.name}
                 </h3>
-
-
 
                 <p>
                     Brand:
@@ -92,8 +74,6 @@ const ProductCard = ({ product }) => {
                     </b>
                 </p>
 
-
-
                 <p>
                     Category:
                     <b>
@@ -101,27 +81,18 @@ const ProductCard = ({ product }) => {
                     </b>
                 </p>
 
-
-
                 <h2>
                     ${product.price}
                 </h2>
-
-
 
                 <button
                     onClick={handleCart}
                     disabled={!product.available}
                 >
-
                     Add To Cart
 
                 </button>
-
-
             </div>
-
-
         </div>
 
     );

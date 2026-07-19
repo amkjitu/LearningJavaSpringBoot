@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -49,7 +50,15 @@ public class ProductController {
     }
 
     @PostMapping("/product")
-    public ResponseEntity<?> addProduct(@RequestPart("product") Product product, @RequestPart("imageFile") MultipartFile imageFile) {
+    public ResponseEntity<?> addProduct(
+            @RequestPart("product") Product product,
+            @RequestPart(
+                    value="imageFile",
+                    required=false
+            )
+            MultipartFile imageFile
+
+    ) throws IOException {
         try {
             Product createdProduct = service.addProduct(product, imageFile);
             return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
@@ -98,4 +107,11 @@ public class ProductController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/products/search")
+    public ResponseEntity<List<Product>> searchProducts(@RequestParam String keyword) {
+        List<Product> products = service.searchProducts(keyword);
+        return new ResponseEntity<>(products, HttpStatus.OK);
+    }
+
 }

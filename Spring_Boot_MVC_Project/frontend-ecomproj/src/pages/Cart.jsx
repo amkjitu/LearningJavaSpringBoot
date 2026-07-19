@@ -11,54 +11,35 @@ const Cart = ()=>{
         removeFromCart
     } = useCart();
 
-
-
     if(cartItems.length===0){
-
         return (
-
             <h2 className="empty-cart">
                 Your cart is empty
             </h2>
-
         );
-
     }
 
-
-
     return (
-
         <div className="cart-container">
-
-
             <h1>
                 Shopping Cart
             </h1>
 
-
-
             {
                 cartItems.map(item=>(
-
-
                     <div
                         className="cart-item"
                         key={item.id}
                     >
 
-
                         <div>
-
                             <h3>
                                 {item.name}
                             </h3>
 
-
                             <p>
                                 ${item.price}
                             </p>
-
 
                             <p>
                                 Quantity:
@@ -66,10 +47,7 @@ const Cart = ()=>{
                                 {item.quantity}
                             </p>
 
-
                         </div>
-
-
 
                         <button
 
@@ -78,26 +56,15 @@ const Cart = ()=>{
                             }
 
                         >
-
                             Remove
 
                         </button>
 
-
-
                     </div>
-
-
                 ))
             }
-
-
         </div>
-
     );
-
-
 };
-
 
 export default Cart;

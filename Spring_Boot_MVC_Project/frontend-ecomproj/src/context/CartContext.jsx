@@ -1,29 +1,17 @@
 import React, { createContext, useContext, useState } from "react";
-
-
 const CartContext = createContext();
-
-
 
 export const CartProvider = ({children}) => {
 
-
     const [cartItems,setCartItems] = useState([]);
-
-
-
     const addToCart = (product)=>{
 
-
         setCartItems((previous)=>{
-
 
             const existingProduct =
                 previous.find(
                     item=>item.id === product.id
                 );
-
-
 
             if(existingProduct){
 

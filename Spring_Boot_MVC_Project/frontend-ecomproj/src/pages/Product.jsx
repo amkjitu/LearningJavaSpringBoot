@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductById, getProductImage, deleteProduct } from "../services/productService";
+import noProductImage from "../assets/images/no-product.png";
 import "../assets/styles/product.css";
 import toast from "react-hot-toast";
+import { useCart } from "../context/CartContext";
 
 const Product = () => {
 
@@ -10,6 +12,7 @@ const Product = () => {
     const navigate = useNavigate();
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(false);
+    const { addToCart } = useCart();
 
     const handleDelete = async () => {
         const confirmDelete = window.confirm(
@@ -29,6 +32,13 @@ const Product = () => {
                 "Failed to delete product"
             );
         }
+    };
+
+    const handleCart = (e)=>{
+
+        e.stopPropagation();
+        addToCart(product);
+        navigate("/cart");
     };
 
     useEffect(() => {
@@ -69,7 +79,7 @@ const Product = () => {
                     src={
                         product.imageData
                             ? getProductImage(product.id)
-                            : "/no-product.png"
+                            : noProductImage
                     }
                     alt={product.name}
                     onError={(e)=>{
@@ -140,6 +150,10 @@ const Product = () => {
 
                     <button className="delete-btn" onClick={handleDelete}>
                         Delete Product
+                    </button>
+
+                    <button onClick={handleCart} disabled={!product.available}>
+                        Add To Cart
                     </button>
 
                 </div>

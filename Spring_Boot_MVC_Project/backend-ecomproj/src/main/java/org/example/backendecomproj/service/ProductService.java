@@ -24,9 +24,25 @@ public class ProductService {
     }
 
     public Product addProduct(Product product, MultipartFile imageFile) throws IOException {
-        product.setImageName(imageFile.getOriginalFilename());
-        product.setImageType(imageFile.getContentType());
-        product.setImageData(imageFile.getBytes());
+        if(imageFile != null && !imageFile.isEmpty()) {
+            product.setImageName(
+                    imageFile.getOriginalFilename()
+            );
+
+            product.setImageType(
+                    imageFile.getContentType()
+            );
+
+            product.setImageData(
+                    imageFile.getBytes()
+            );
+        }
+
+        else {
+            product.setImageName(null);
+            product.setImageType(null);
+            product.setImageData(null);
+        }
         return productRepository.save(product);
     }
 
@@ -62,5 +78,9 @@ public class ProductService {
             throw new RuntimeException("Product not found");
         }
         productRepository.deleteById(id);
+    }
+
+    public List<Product> searchProducts(String keyword) {
+        return productRepository.searchProducts(keyword);
     }
 }
