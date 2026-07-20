@@ -25,5 +25,5 @@ By using the JdbcTemplate, developers can focus on writing the SQL queries and m
 Which will actually let us know about why we will use it on top of Hibernate ORM.
 Suppose you don't want to use Hibernate rather want to use Jimmer/jOOQ (type-safe SQL builder)/MyBatis (SQL mapping) then it will be harder. But as Hibernate ORM follows Java Persistence API so it will be easier.
 
-#### Recall What is APA:
+#### Recall What is JPA:
 JPA stands for Java Persistence API (now known as Jakarta Persistence API). It is a standard Java specification used for Object-Relational Mapping (ORM). JPA allows developers to easily manage relational database data using Java objects rather than writing complex, manual SQL queries.

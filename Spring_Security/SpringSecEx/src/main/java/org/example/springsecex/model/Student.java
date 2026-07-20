@@ -1,13 +1,13 @@
-package org.example.springsecex;
+package org.example.springsecex.model;
 
 public class Student {
     private String id;
     private String name;
 
-    Student() {
+    public Student() {
     }
 
-    Student(String id, String name) {
+    public Student(String id, String name) {
         this.id = id;
         this.name = name;
     }

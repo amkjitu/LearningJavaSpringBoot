@@ -1,5 +1,14 @@
+/*
+* Flow of authentication:
+*
+* (Unauthenticated Object)---default/user-defined provider---(Authenticated Object)
+* Authentication Object ----->   Authentication Provider ----->  Authenticated Object
+* */
+
 package org.example.springsecex.config;
 
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -25,7 +34,7 @@ public class SecurityConfig {
         return http
             .csrf(customizer -> customizer.disable())
             .authorizeHttpRequests(requests -> requests.anyRequest().authenticated())
-            // .formLogin(Customizer.withDefaults()) // uncomment if you want to use default form login
+//            .formLogin(Customizer.withDefaults()) // uncomment if you want to use default form login
             .httpBasic(Customizer.withDefaults())
             .sessionManagement(session ->
                     session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -53,13 +62,16 @@ public class SecurityConfig {
 //        return new InMemoryUserDetailsManager(user1, user2);
 //    }
 
-    // 3.
+    // 3. Define a custom authentication provider which comes from the database
+    @Autowired
+    private UserDetailsService userDetailsService;
+
     @Bean
     public AuthenticationProvider authenticationProvider() {
 
-        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider(userDetailsService);
         provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
-        provider.setUserDetailsService(userDetailsService);
+
         return provider;
     }
 
